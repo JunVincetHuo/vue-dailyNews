@@ -6,12 +6,14 @@
       </p>
       <ul class="list">
         <li class="item" v-for="(newsItem,newsItemIndex) in newsListItem.newsList" :key="newsItemIndex">
-          <h2 class="item-title">
-            {{newsItem.title}}
-          </h2>
-          <div class="image-wrapper">
-            <img class="item-image" v-lazy="attachImageUrl(newsItem.images[0])" :alt="newsItem.title">
-          </div>
+          <router-link :to="{name:'newsDetail',params:{id:newsItem.id}}">
+            <h2 class="item-title">
+              {{newsItem.title}}
+            </h2>
+            <div class="image-wrapper">
+              <img class="item-image" v-lazy="attachImageUrl(newsItem.images[0])" :alt="newsItem.title">
+            </div>
+          </router-link>
         </li>
       </ul>
     </div>

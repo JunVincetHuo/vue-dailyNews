@@ -1,4 +1,5 @@
 export default {
-  stories:[], // 新闻内容数组
-  ids:[] // 新闻id数组
+  stories:[], // 首页新闻内容数组
+  ids:[] // 首页新闻id数组
+
 }
